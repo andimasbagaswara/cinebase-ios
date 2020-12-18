@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8963DB25258D15D700F6F306 /* cinebase_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB24258D15D700F6F306 /* cinebase_iosApp.swift */; };
+		8963DB27258D15D700F6F306 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB26258D15D700F6F306 /* ContentView.swift */; };
+		8963DB29258D15D800F6F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8963DB28258D15D800F6F306 /* Assets.xcassets */; };
+		8963DB2C258D15D800F6F306 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8963DB2B258D15D800F6F306 /* Preview Assets.xcassets */; };
+		8963DB2E258D15D800F6F306 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB2D258D15D800F6F306 /* Persistence.swift */; };
+		8963DB31258D15D800F6F306 /* cinebase_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB2F258D15D800F6F306 /* cinebase_ios.xcdatamodeld */; };
+		8963DB3C258D15D800F6F306 /* cinebase_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB3B258D15D800F6F306 /* cinebase_iosTests.swift */; };
+		8963DB47258D15D800F6F306 /* cinebase_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB46258D15D800F6F306 /* cinebase_iosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8963DB38258D15D800F6F306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8963DB19258D15D700F6F306 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8963DB20258D15D700F6F306;
+			remoteInfo = "cinebase-ios";
+		};
+		8963DB43258D15D800F6F306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8963DB19258D15D700F6F306 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8963DB20258D15D700F6F306;
+			remoteInfo = "cinebase-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8963DB21258D15D700F6F306 /* cinebase-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinebase-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8963DB24258D15D700F6F306 /* cinebase_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinebase_iosApp.swift; sourceTree = "<group>"; };
+		8963DB26258D15D700F6F306 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8963DB28258D15D800F6F306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8963DB2B258D15D800F6F306 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8963DB2D258D15D800F6F306 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8963DB30258D15D800F6F306 /* cinebase_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cinebase_ios.xcdatamodel; sourceTree = "<group>"; };
+		8963DB32258D15D800F6F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8963DB37258D15D800F6F306 /* cinebase-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cinebase-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8963DB3B258D15D800F6F306 /* cinebase_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinebase_iosTests.swift; sourceTree = "<group>"; };
+		8963DB3D258D15D800F6F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8963DB42258D15D800F6F306 /* cinebase-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cinebase-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8963DB46258D15D800F6F306 /* cinebase_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinebase_iosUITests.swift; sourceTree = "<group>"; };
+		8963DB48258D15D800F6F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8963DB1E258D15D700F6F306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8963DB34258D15D800F6F306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8963DB3F258D15D800F6F306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8963DB18258D15D700F6F306 = {
+			isa = PBXGroup;
+			children = (
+				8963DB23258D15D700F6F306 /* cinebase-ios */,
+				8963DB3A258D15D800F6F306 /* cinebase-iosTests */,
+				8963DB45258D15D800F6F306 /* cinebase-iosUITests */,
+				8963DB22258D15D700F6F306 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8963DB22258D15D700F6F306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8963DB21258D15D700F6F306 /* cinebase-ios.app */,
+				8963DB37258D15D800F6F306 /* cinebase-iosTests.xctest */,
+				8963DB42258D15D800F6F306 /* cinebase-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8963DB23258D15D700F6F306 /* cinebase-ios */ = {
+			isa = PBXGroup;
+			children = (
+				8963DB24258D15D700F6F306 /* cinebase_iosApp.swift */,
+				8963DB26258D15D700F6F306 /* ContentView.swift */,
+				8963DB28258D15D800F6F306 /* Assets.xcassets */,
+				8963DB2D258D15D800F6F306 /* Persistence.swift */,
+				8963DB32258D15D800F6F306 /* Info.plist */,
+				8963DB2F258D15D800F6F306 /* cinebase_ios.xcdatamodeld */,
+				8963DB2A258D15D800F6F306 /* Preview Content */,
+			);
+			path = "cinebase-ios";
+			sourceTree = "<group>";
+		};
+		8963DB2A258D15D800F6F306 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8963DB2B258D15D800F6F306 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8963DB3A258D15D800F6F306 /* cinebase-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				8963DB3B258D15D800F6F306 /* cinebase_iosTests.swift */,
+				8963DB3D258D15D800F6F306 /* Info.plist */,
+			);
+			path = "cinebase-iosTests";
+			sourceTree = "<group>";
+		};
+		8963DB45258D15D800F6F306 /* cinebase-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8963DB46258D15D800F6F306 /* cinebase_iosUITests.swift */,
+				8963DB48258D15D800F6F306 /* Info.plist */,
+			);
+			path = "cinebase-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8963DB20258D15D700F6F306 /* cinebase-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8963DB4B258D15D800F6F306 /* Build configuration list for PBXNativeTarget "cinebase-ios" */;
+			buildPhases = (
+				8963DB1D258D15D700F6F306 /* Sources */,
+				8963DB1E258D15D700F6F306 /* Frameworks */,
+				8963DB1F258D15D700F6F306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cinebase-ios";
+			productName = "cinebase-ios";
+			productReference = 8963DB21258D15D700F6F306 /* cinebase-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8963DB36258D15D800F6F306 /* cinebase-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8963DB4E258D15D800F6F306 /* Build configuration list for PBXNativeTarget "cinebase-iosTests" */;
+			buildPhases = (
+				8963DB33258D15D800F6F306 /* Sources */,
+				8963DB34258D15D800F6F306 /* Frameworks */,
+				8963DB35258D15D800F6F306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8963DB39258D15D800F6F306 /* PBXTargetDependency */,
+			);
+			name = "cinebase-iosTests";
+			productName = "cinebase-iosTests";
+			productReference = 8963DB37258D15D800F6F306 /* cinebase-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8963DB41258D15D800F6F306 /* cinebase-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8963DB51258D15D800F6F306 /* Build configuration list for PBXNativeTarget "cinebase-iosUITests" */;
+			buildPhases = (
+				8963DB3E258D15D800F6F306 /* Sources */,
+				8963DB3F258D15D800F6F306 /* Frameworks */,
+				8963DB40258D15D800F6F306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8963DB44258D15D800F6F306 /* PBXTargetDependency */,
+			);
+			name = "cinebase-iosUITests";
+			productName = "cinebase-iosUITests";
+			productReference = 8963DB42258D15D800F6F306 /* cinebase-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8963DB19258D15D700F6F306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					8963DB20258D15D700F6F306 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					8963DB36258D15D800F6F306 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 8963DB20258D15D700F6F306;
+					};
+					8963DB41258D15D800F6F306 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 8963DB20258D15D700F6F306;
+					};
+				};
+			};
+			buildConfigurationList = 8963DB1C258D15D700F6F306 /* Build configuration list for PBXProject "cinebase-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8963DB18258D15D700F6F306;
+			productRefGroup = 8963DB22258D15D700F6F306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8963DB20258D15D700F6F306 /* cinebase-ios */,
+				8963DB36258D15D800F6F306 /* cinebase-iosTests */,
+				8963DB41258D15D800F6F306 /* cinebase-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8963DB1F258D15D700F6F306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8963DB2C258D15D800F6F306 /* Preview Assets.xcassets in Resources */,
+				8963DB29258D15D800F6F306 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8963DB35258D15D800F6F306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8963DB40258D15D800F6F306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8963DB1D258D15D700F6F306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8963DB2E258D15D800F6F306 /* Persistence.swift in Sources */,
+				8963DB31258D15D800F6F306 /* cinebase_ios.xcdatamodeld in Sources */,
+				8963DB27258D15D700F6F306 /* ContentView.swift in Sources */,
+				8963DB25258D15D700F6F306 /* cinebase_iosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8963DB33258D15D800F6F306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8963DB3C258D15D800F6F306 /* cinebase_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8963DB3E258D15D800F6F306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8963DB47258D15D800F6F306 /* cinebase_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8963DB39258D15D800F6F306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8963DB20258D15D700F6F306 /* cinebase-ios */;
+			targetProxy = 8963DB38258D15D800F6F306 /* PBXContainerItemProxy */;
+		};
+		8963DB44258D15D800F6F306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8963DB20258D15D700F6F306 /* cinebase-ios */;
+			targetProxy = 8963DB43258D15D800F6F306 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8963DB49258D15D800F6F306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8963DB4A258D15D800F6F306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8963DB4C258D15D800F6F306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"cinebase-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = TAYLVU398Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "cinebase-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cinebase-app.cinebase-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8963DB4D258D15D800F6F306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"cinebase-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = TAYLVU398Z;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "cinebase-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cinebase-app.cinebase-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8963DB4F258D15D800F6F306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAYLVU398Z;
+				INFOPLIST_FILE = "cinebase-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cinebase-app.cinebase-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cinebase-ios.app/cinebase-ios";
+			};
+			name = Debug;
+		};
+		8963DB50258D15D800F6F306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAYLVU398Z;
+				INFOPLIST_FILE = "cinebase-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cinebase-app.cinebase-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cinebase-ios.app/cinebase-ios";
+			};
+			name = Release;
+		};
+		8963DB52258D15D800F6F306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAYLVU398Z;
+				INFOPLIST_FILE = "cinebase-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cinebase-app.cinebase-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "cinebase-ios";
+			};
+			name = Debug;
+		};
+		8963DB53258D15D800F6F306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TAYLVU398Z;
+				INFOPLIST_FILE = "cinebase-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cinebase-app.cinebase-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "cinebase-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8963DB1C258D15D700F6F306 /* Build configuration list for PBXProject "cinebase-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8963DB49258D15D800F6F306 /* Debug */,
+				8963DB4A258D15D800F6F306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8963DB4B258D15D800F6F306 /* Build configuration list for PBXNativeTarget "cinebase-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8963DB4C258D15D800F6F306 /* Debug */,
+				8963DB4D258D15D800F6F306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8963DB4E258D15D800F6F306 /* Build configuration list for PBXNativeTarget "cinebase-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8963DB4F258D15D800F6F306 /* Debug */,
+				8963DB50258D15D800F6F306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8963DB51258D15D800F6F306 /* Build configuration list for PBXNativeTarget "cinebase-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8963DB52258D15D800F6F306 /* Debug */,
+				8963DB53258D15D800F6F306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8963DB2F258D15D800F6F306 /* cinebase_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8963DB30258D15D800F6F306 /* cinebase_ios.xcdatamodel */,
+			);
+			currentVersion = 8963DB30258D15D800F6F306 /* cinebase_ios.xcdatamodel */;
+			path = cinebase_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8963DB19258D15D700F6F306 /* Project object */;
+}
