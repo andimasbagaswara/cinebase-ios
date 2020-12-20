@@ -13,7 +13,7 @@ struct cinebase_iosApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

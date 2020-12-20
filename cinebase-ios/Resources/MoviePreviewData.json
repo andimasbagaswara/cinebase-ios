@@ -1,0 +1,67 @@
+[
+    {
+        "backdrop_path": "/jeAQdDX9nguP6YOX6QSWKDPkbBo.jpg",
+        "genre_ids": [
+            28,
+            14,
+            878
+        ],
+        "id": 590706,
+        "original_language": "en",
+        "overview": "Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.",
+        "poster_path": "/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg",
+        "release_date": "2020-11-20",
+        "title": "Jiu Jitsu",
+        "vote_average": 5.7,
+        "vote_count": 172
+    },
+    {
+        "backdrop_path": "/cjaOSjsjV6cl3uXdJqimktT880L.jpg",
+        "genre_ids": [
+            12,
+            14,
+            10751,
+            16
+        ],
+        "id": 529203,
+        "original_language": "en",
+        "overview": "After leaving their cave, the Croods encounter their biggest threat since leaving: another family called the Bettermans, who claim and show to be better and evolved. Grug grows suspicious of the Betterman parents, Phil and Hope,  as they secretly plan to break up his daughter Eep with her loving boyfriend Guy to ensure that their daughter Dawn has a loving and smart partner to protect her.",
+        "poster_path": "/tK1zy5BsCt1J4OzoDicXmr0UTFH.jpg",
+        "release_date": "2020-11-25",
+        "title": "The Croods: A New Age",
+        "vote_average": 8,
+        "vote_count": 317
+    },
+    {
+        "backdrop_path": "/wk58aoyWpMTVkKkdjw889XfWGdL.jpg",
+        "genre_ids": [
+            53,
+            80,
+            9648
+        ],
+        "id": 646593,
+        "original_language": "en",
+        "overview": "After getting hired to probe a suspicious death in the small town of Wander, a mentally unstable private investigator becomes convinced the case is linked to the same 'conspiracy cover up' that caused the death of his daughter.",
+        "poster_path": "/2AwPvNHphpZBJDqjZKVuMAbvS0v.jpg",
+        "release_date": "2020-12-04",
+        "title": "Wander",
+        "vote_average": 5.6,
+        "vote_count": 35
+    },
+    {
+        "backdrop_path": "/ckfwfLkl0CkafTasoRw5FILhZAS.jpg",
+        "genre_ids": [
+            28,
+            35,
+            14
+        ],
+        "id": 602211,
+        "original_language": "en",
+        "overview": "A rowdy, unorthodox Santa Claus is fighting to save his declining business. Meanwhile, Billy, a neglected and precocious 12 year old, hires a hit man to kill Santa after receiving a lump of coal in his stocking.",
+        "poster_path": "/xZR3dm2wdKEFWJrqIVFnNyjhAQX.jpg",
+        "release_date": "2020-11-13",
+        "title": "Fatman",
+        "vote_average": 5.9,
+        "vote_count": 190
+    }
+]
