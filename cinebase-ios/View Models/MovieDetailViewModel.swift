@@ -19,6 +19,8 @@ struct MovieDetailViewModel {
         return genre?.name ?? "New"
     }
     
+    var homepage: String { movieDetail.homepage }
+    
     var id: Int { movieDetail.id }
     
     var overview: String { movieDetail.overview }
@@ -29,9 +31,18 @@ struct MovieDetailViewModel {
     
     var runtime: Int { movieDetail.runtime }
     
+    var spokenLanguage: String {
+        if movieDetail.spokenLanguages.isEmpty { return "English" }
+        return movieDetail.spokenLanguages[0].name
+    }
+    
     var status: String { movieDetail.status }
     
     var tagline: String { movieDetail.tagline }
     
     var title: String { movieDetail.title }
+    
+    var voteAverage: Double { movieDetail.voteAverage }
+    
+    var voteCount: Int { movieDetail.voteCount }
 }

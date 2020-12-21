@@ -1,0 +1,27 @@
+{
+    "backdrop_path": "/52AfXWuXCHn3UjD17rBruA9f5qb.jpg",
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "homepage": "http://www.foxmovies.com/movies/fight-club",
+    "id": 550,
+    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+    "poster_path": "/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+    "release_date": "1999-10-15",
+    "runtime": 139,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Mischief. Mayhem. Soap.",
+    "title": "Fight Club",
+    "vote_average": 8.4,
+    "vote_count": 20625
+}

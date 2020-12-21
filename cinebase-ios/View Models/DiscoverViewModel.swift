@@ -12,6 +12,7 @@ class DiscoverViewModel: ObservableObject {
     @Published var nowPlayingList = [MovieViewModel]()
     @Published var popularList = [MovieViewModel]()
     @Published var topRatedList = [MovieViewModel]()
+    @Published var upcomingList = [MovieViewModel]()
     
     func loadData() {
         
@@ -47,6 +48,19 @@ class DiscoverViewModel: ObservableObject {
                 if let movieList = response {
                     DispatchQueue.main.async {
                         self.topRatedList = movieList[0...4].map(MovieViewModel.init)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        MovieService.shared.getMoviesByCategory(url: URL.urlForUpcomingMovies()) { (result) in
+            switch result {
+            case .success(let response):
+                if let movieList = response {
+                    DispatchQueue.main.async {
+                        self.upcomingList = movieList[0...4].map(MovieViewModel.init)
                     }
                 }
             case .failure(let error):

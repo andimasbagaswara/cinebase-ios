@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8935337325900D2C00EF4E73 /* MovieDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935337225900D2C00EF4E73 /* MovieDetailScreen.swift */; };
+		8935338025900F7A00EF4E73 /* MovieDetailPreviewData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8935337F25900F7A00EF4E73 /* MovieDetailPreviewData.json */; };
+		893533912590215F00EF4E73 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8935338E2590215F00EF4E73 /* Poppins-SemiBold.ttf */; };
+		893533922590215F00EF4E73 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8935338F2590215F00EF4E73 /* Poppins-Light.ttf */; };
+		893533932590215F00EF4E73 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 893533902590215F00EF4E73 /* Poppins-Medium.ttf */; };
+		89353398259021D400EF4E73 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89353397259021D400EF4E73 /* Font+Extensions.swift */; };
+		8935339D2590292300EF4E73 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935339C2590292300EF4E73 /* CustomButtonStyle.swift */; };
 		8963DB25258D15D700F6F306 /* cinebase_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB24258D15D700F6F306 /* cinebase_iosApp.swift */; };
 		8963DB27258D15D700F6F306 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963DB26258D15D700F6F306 /* ContentView.swift */; };
 		8963DB29258D15D800F6F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8963DB28258D15D800F6F306 /* Assets.xcassets */; };
@@ -58,6 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8935337225900D2C00EF4E73 /* MovieDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailScreen.swift; sourceTree = "<group>"; };
+		8935337F25900F7A00EF4E73 /* MovieDetailPreviewData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieDetailPreviewData.json; sourceTree = "<group>"; };
+		8935338E2590215F00EF4E73 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		8935338F2590215F00EF4E73 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		893533902590215F00EF4E73 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		89353397259021D400EF4E73 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		8935339C2590292300EF4E73 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		8963DB21258D15D700F6F306 /* cinebase-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinebase-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8963DB24258D15D700F6F306 /* cinebase_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinebase_iosApp.swift; sourceTree = "<group>"; };
 		8963DB26258D15D700F6F306 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +136,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		893533872590206B00EF4E73 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8935338F2590215F00EF4E73 /* Poppins-Light.ttf */,
+				893533902590215F00EF4E73 /* Poppins-Medium.ttf */,
+				8935338E2590215F00EF4E73 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8963DB18258D15D700F6F306 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +229,7 @@
 			children = (
 				8963DB6C258D1B7E00F6F306 /* URL+Extensions.swift */,
 				89F96A1E258D8DB700CF6B65 /* View+Extensions.swift */,
+				89353397259021D400EF4E73 /* Font+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,8 +263,10 @@
 		89F96A23258D8E8C00CF6B65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				893533872590206B00EF4E73 /* Fonts */,
 				89856A81258F7CE90014862A /* GenresData.json */,
 				89B2C5ED258F26DF00038D36 /* MoviePreviewData.json */,
+				8935337F25900F7A00EF4E73 /* MovieDetailPreviewData.json */,
 				8963DB28258D15D800F6F306 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -289,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				89F96A45258DCF4600CF6B65 /* DashboardScreen.swift */,
+				8935337225900D2C00EF4E73 /* MovieDetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -297,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				89F96A4E258DD0BE00CF6B65 /* NavigationBarModifier.swift */,
+				8935339C2590292300EF4E73 /* CustomButtonStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -404,8 +433,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893533922590215F00EF4E73 /* Poppins-Light.ttf in Resources */,
 				89B2C5EE258F26DF00038D36 /* MoviePreviewData.json in Resources */,
 				89856A82258F7CE90014862A /* GenresData.json in Resources */,
+				8935338025900F7A00EF4E73 /* MovieDetailPreviewData.json in Resources */,
+				893533912590215F00EF4E73 /* Poppins-SemiBold.ttf in Resources */,
+				893533932590215F00EF4E73 /* Poppins-Medium.ttf in Resources */,
 				8963DB2C258D15D800F6F306 /* Preview Assets.xcassets in Resources */,
 				8963DB29258D15D800F6F306 /* Assets.xcassets in Resources */,
 			);
@@ -441,6 +474,7 @@
 				89F96A5F258DD6BD00CF6B65 /* LibraryView.swift in Sources */,
 				89F96A1A258D8CBC00CF6B65 /* LoadingState.swift in Sources */,
 				89B2C5BA258ED9C500038D36 /* DiscoverSectionScrollView.swift in Sources */,
+				89353398259021D400EF4E73 /* Font+Extensions.swift in Sources */,
 				8963DB2E258D15D800F6F306 /* Persistence.swift in Sources */,
 				89B2C5C2258EDAFC00038D36 /* DiscoverViewModel.swift in Sources */,
 				89B2C5D5258EF06500038D36 /* MovieViewModel.swift in Sources */,
@@ -455,7 +489,9 @@
 				8963DB67258D18DB00F6F306 /* NetworkError.swift in Sources */,
 				8963DB27258D15D700F6F306 /* ContentView.swift in Sources */,
 				89F96A64258DD6C800CF6B65 /* ProfileView.swift in Sources */,
+				8935337325900D2C00EF4E73 /* MovieDetailScreen.swift in Sources */,
 				8963DB25258D15D700F6F306 /* cinebase_iosApp.swift in Sources */,
+				8935339D2590292300EF4E73 /* CustomButtonStyle.swift in Sources */,
 				89F96A46258DCF4600CF6B65 /* DashboardScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

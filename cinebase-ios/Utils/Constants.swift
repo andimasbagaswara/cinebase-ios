@@ -9,7 +9,7 @@ import UIKit
 
 struct Constants {
     
-    static let apiKey = "79fb6961d1ac05fd03a3f57954f85234"
+    static let apiKey = ""
     
     static let baseURL = "https://api.themoviedb.org/3"
     
@@ -24,6 +24,8 @@ struct Constants {
     static let heightRatio: CGFloat = UIScreen.main.bounds.height / 812
     
     static let moviePreviewData: [Movie] = JSONLoader().load("MoviePreviewData.json")
+    
+    static let movieDetailPreviewData: MovieDetail = JSONLoader().load("MovieDetailPreviewData.json")
     
     static let genresData: [Genre] = JSONLoader().load("GenresData.json")
 }

@@ -31,7 +31,7 @@ struct MovieViewModel {
     
     var title: String { movie.title }
     
-    var voteAverage: Int { Int(ceil(movie.voteAverage)) }
+    var voteAverage: Double { movie.voteAverage }
     
     var voteCount: Int { movie.voteCount }
 }

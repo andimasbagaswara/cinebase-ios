@@ -18,9 +18,10 @@ struct DiscoverView: View {
                 Group {
                     HStack(alignment: .center, spacing: nil, content: {
                         Text("Now Playing")
+                            .font(.customTitle2)
                         Spacer()
                     })
-                    .padding(.horizontal, Constants.heightRatio * 20)
+                    .padding(.horizontal, Constants.heightRatio * 19)
                     .padding(.vertical)
                     
                     DiscoverBannerScrollView(movieVM: self.discoverVM.nowPlayingList)
@@ -29,10 +30,12 @@ struct DiscoverView: View {
                 Group {
                     HStack(alignment: .center, spacing: nil, content: {
                         Text("Popular")
+                            .font(.customTitle2)
                         Spacer()
                         Text("More")
+                            .font(.customBody)
                     })
-                    .padding(.horizontal, Constants.heightRatio * 20)
+                    .padding(.horizontal, Constants.heightRatio * 19)
                     .padding(.vertical)
                     
                     DiscoverSectionScrollView(movieVM: self.discoverVM.popularList)
@@ -41,13 +44,29 @@ struct DiscoverView: View {
                 Group {
                     HStack(alignment: .center, spacing: nil, content: {
                         Text("Top Rated")
+                            .font(.customTitle2)
                         Spacer()
                         Text("More")
+                            .font(.customBody)
                     })
-                    .padding(.horizontal, Constants.heightRatio * 20)
+                    .padding(.horizontal, Constants.heightRatio * 19)
                     .padding(.vertical)
                     
                     DiscoverSectionScrollView(movieVM: self.discoverVM.topRatedList)
+                }
+                
+                Group {
+                    HStack(alignment: .center, spacing: nil, content: {
+                        Text("Upcoming")
+                            .font(.customTitle2)
+                        Spacer()
+                        Text("More")
+                            .font(.customBody)
+                    })
+                    .padding(.horizontal, Constants.heightRatio * 19)
+                    .padding(.vertical)
+                    
+                    DiscoverSectionScrollView(movieVM: self.discoverVM.upcomingList)
                 }
                     .navigationTitle("Discover")
             })
