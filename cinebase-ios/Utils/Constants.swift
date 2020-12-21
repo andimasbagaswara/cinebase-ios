@@ -27,5 +27,7 @@ struct Constants {
     
     static let movieDetailPreviewData: MovieDetail = JSONLoader().load("MovieDetailPreviewData.json")
     
+    static let movieReviewPreviewData: [Review] = JSONLoader().load("MovieReviewPreviewData.json")
+    
     static let genresData: [Genre] = JSONLoader().load("GenresData.json")
 }

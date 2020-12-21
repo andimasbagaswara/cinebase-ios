@@ -54,7 +54,7 @@ struct MovieDetailView: View {
             Divider()
                 .padding(.horizontal)
             
-            VStack(alignment: .leading, spacing: 10, content: {
+            VStack(alignment: .leading, spacing: Constants.heightRatio * 10, content: {
                 Text("''\(movieDetailVM.tagline)''")
                     .font(.customTitle2)
                 Text("Storyline")
@@ -72,6 +72,13 @@ struct MovieDetailView: View {
             })
             .foregroundColor(.gray)
             .padding()
+            
+            if !self.movieDetailVM.reviewList.isEmpty {
+                Divider()
+                    .padding(.horizontal)
+                
+                ReviewSectionView(reviewVM: self.movieDetailVM.reviewList)
+            }
         })
         .edgesIgnoringSafeArea(.top)
     }

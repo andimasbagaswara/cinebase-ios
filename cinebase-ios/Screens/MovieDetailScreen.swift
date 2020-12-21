@@ -10,7 +10,7 @@ import SwiftUI
 struct MovieDetailScreen: View {
     
     let id: Int
-    @ObservedObject var movieDetailVM = MovieDetailViewModel()
+    @ObservedObject private var movieDetailVM = MovieDetailViewModel()
     
     var body: some View {
         VStack(alignment: .center, spacing: nil, content: {

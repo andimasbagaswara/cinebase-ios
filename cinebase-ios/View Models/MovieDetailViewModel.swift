@@ -10,6 +10,7 @@ import Foundation
 class MovieDetailViewModel: ObservableObject {
     
     @Published var loadingState = LoadingState.loading
+    @Published var reviewList = [ReviewViewModel]()
     
     private var movieDetail: MovieDetail?
     
@@ -33,6 +34,19 @@ class MovieDetailViewModel: ObservableObject {
                     self.loadingState = .failed
                 }
                    
+            }
+        }
+        
+        MovieService.shared.getMovieReviewBy(id: id) { (result) in
+            switch result {
+            case .success(let response):
+                if let reviewList = response {
+                    DispatchQueue.main.async {
+                        self.reviewList = reviewList.map(ReviewViewModel.init)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }

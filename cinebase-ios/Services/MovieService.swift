@@ -42,4 +42,19 @@ class MovieService: ObservableObject {
             
         }.resume()
     }
+    
+    func getMovieReviewBy(id: Int, completion: @escaping (Result<[Review]?, NetworkError>) -> Void) {
+        
+        guard let url = URL.urlForMovieReview(id: id) else { return completion(.failure(.badURL)) }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else { return completion(.failure(.noData)) }
+            
+            guard let response = try? JSONDecoder().decode(ReviewResponse.self, from: data) else { return completion(.failure(.decodingError)) }
+            
+            completion(.success(response.results))
+            
+        }.resume()
+    }
 }
