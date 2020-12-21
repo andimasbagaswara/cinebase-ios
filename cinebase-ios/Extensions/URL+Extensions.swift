@@ -10,12 +10,12 @@ import Foundation
 extension URL {
     
     // MARK: GET "/movie/{movie_id}"
-    static func urlForMovieDetail(id: String) -> URL? {
+    static func urlForMovieDetail(id: Int) -> URL? {
         return URL(string: "\(Constants.baseURL)/movie/\(id)?api_key=\(Constants.apiKey)&language=en-US")
     }
     
     // MARK: GET "/movie/{movie_id}/reviews"
-    static func urlForMovieReview(id: String) -> URL? {
+    static func urlForMovieReview(id: Int) -> URL? {
         return URL(string: "\(Constants.baseURL)/movie/\(id)/reviews?api_key=\(Constants.apiKey)&language=en-US")
     }
     

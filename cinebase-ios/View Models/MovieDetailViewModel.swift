@@ -7,42 +7,73 @@
 
 import Foundation
 
-struct MovieDetailViewModel {
+class MovieDetailViewModel: ObservableObject {
     
-    let movieDetail: MovieDetail
+    @Published var loadingState = LoadingState.loading
     
-    var backdropPath: String { Constants.imageURL + Constants.backdropSizes + movieDetail.backdropPath }
+    private var movieDetail: MovieDetail?
+    
+    init(movieDetail: MovieDetail? = nil) {
+        self.movieDetail = movieDetail
+    }
+    
+    func getMovieDetailById(id: Int) {
+        
+        MovieService.shared.getMovieDetailBy(id: id) { result in
+            switch result {
+                case .success(let details):
+                    DispatchQueue.main.async {
+                        self.movieDetail = details
+                        self.loadingState = .success
+                    }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.loadingState = .failed
+                }
+                   
+            }
+        }
+    }
+    
+    var backdropPath: String {
+        let backdropPath = self.movieDetail?.backdropPath ?? ""
+        return Constants.imageURL + Constants.backdropSizes + backdropPath
+    }
     
     var genres: String {
-        if movieDetail.genres.isEmpty { return "New" }
-        let genre = Constants.genresData.first(where: {$0.id == movieDetail.genres[0].id})
-        return genre?.name ?? "New"
+        guard let genres = self.movieDetail?.genres else { return "New" }
+        return genres[0].name
     }
     
-    var homepage: String { movieDetail.homepage }
+    var homepage: String { self.movieDetail?.homepage ?? "" }
     
-    var id: Int { movieDetail.id }
+    var id: Int { self.movieDetail?.id ?? 0 }
     
-    var overview: String { movieDetail.overview }
+    var overview: String { self.movieDetail?.overview ?? "" }
     
-    var posterPath: String { Constants.imageURL + Constants.posterSizes + movieDetail.posterPath }
+    var posterPath: String {
+        let posterPath = self.movieDetail?.posterPath ?? ""
+        return Constants.imageURL + Constants.posterSizes + posterPath
+    }
     
-    var releaseDate: String { movieDetail.releaseDate }
+    var releaseDate: String { self.movieDetail?.releaseDate ?? "" }
     
-    var runtime: Int { movieDetail.runtime }
+    var runtime: Int { self.movieDetail?.runtime ?? 0 }
     
     var spokenLanguage: String {
-        if movieDetail.spokenLanguages.isEmpty { return "English" }
-        return movieDetail.spokenLanguages[0].name
+        guard let spokenLanguages = self.movieDetail?.spokenLanguages else { return "English" }
+        return spokenLanguages[0].name
     }
     
-    var status: String { movieDetail.status }
+    var status: String { self.movieDetail?.status ?? "" }
     
-    var tagline: String { movieDetail.tagline }
+    var tagline: String { self.movieDetail?.tagline ?? "" }
     
-    var title: String { movieDetail.title }
+    var title: String { self.movieDetail?.title ?? "" }
     
-    var voteAverage: Double { movieDetail.voteAverage }
+    var voteAverage: Double { self.movieDetail?.voteAverage ?? 0.0 }
     
-    var voteCount: Int { movieDetail.voteCount }
+    var voteCount: Int { self.movieDetail?.voteCount ?? 0 }
 }

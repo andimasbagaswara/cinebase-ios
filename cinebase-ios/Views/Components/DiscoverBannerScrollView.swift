@@ -15,7 +15,11 @@ struct DiscoverBannerScrollView: View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             HStack(alignment: .center, spacing: nil, content: {
                 ForEach(self.movieVM, id: \.id) { (movieVM) in
-                    TabCardView(movieVM: movieVM)
+                    NavigationLink(
+                        destination: MovieDetailScreen(id: movieVM.id),
+                        label: {
+                            TabCardView(movieVM: movieVM)
+                        })
                 }
             })
             .padding(.horizontal)
@@ -42,6 +46,6 @@ struct DiscoverTabView_Previews: PreviewProvider {
     static var previews: some View {
         let movieVM: [MovieViewModel] = Constants.moviePreviewData.map(MovieViewModel.init)
         DiscoverBannerScrollView(movieVM: movieVM)
-            
+        
     }
 }

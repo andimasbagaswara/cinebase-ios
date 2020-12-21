@@ -15,7 +15,11 @@ struct DiscoverSectionScrollView: View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             HStack(alignment: .center, spacing: Constants.widthRatio * 10, content: {
                 ForEach(self.movieVM, id: \.id) { (movieVM) in
-                    DiscoverItemView(movieVM: movieVM)
+                    NavigationLink(
+                        destination: MovieDetailScreen(id: movieVM.id),
+                        label: {
+                            DiscoverItemView(movieVM: movieVM)
+                        })
                 }
             })
             .padding(.horizontal)
