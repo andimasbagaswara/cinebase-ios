@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LibraryView: View {
+    
+    let libraryVM: LibraryViewModel
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0, content: {
             Text("Placeholder")
@@ -19,6 +22,6 @@ struct LibraryView: View {
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryView()
+        LibraryView(libraryVM: LibraryViewModel())
     }
 }

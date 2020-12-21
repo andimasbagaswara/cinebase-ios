@@ -15,7 +15,7 @@ struct DashboardScreen: View {
                         Image(systemName: "tv")
                         Text("Discover")
                     }.tag(1)
-                    LibraryView().tabItem {
+                    LibraryScreen().tabItem {
                         Image(systemName: "rectangle.3.offgrid")
                         Text("Library")
                     }.tag(2)

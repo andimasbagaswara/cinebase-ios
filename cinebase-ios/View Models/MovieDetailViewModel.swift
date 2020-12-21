@@ -51,6 +51,14 @@ class MovieDetailViewModel: ObservableObject {
         }
     }
     
+    func saveItem() {
+        CoreDataManager.shared.saveItem(id: id, title: title, genre: genres, rating: voteAverage, backdropPath: backdropPath)
+    }
+    
+    func deleteItem(id: Int) {
+        CoreDataManager.shared.deleteItem(id: id)
+    }
+    
     var backdropPath: String {
         let backdropPath = self.movieDetail?.backdropPath ?? ""
         return Constants.imageURL + Constants.backdropSizes + backdropPath

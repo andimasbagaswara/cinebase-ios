@@ -42,7 +42,7 @@ struct MovieDetailView: View {
                     })
                     Spacer()
                     Button(action: {
-                        
+                        movieDetailVM.saveItem()
                     }, label: {
                         Text("SAVE")
                     })

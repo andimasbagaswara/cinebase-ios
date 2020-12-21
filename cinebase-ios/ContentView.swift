@@ -12,14 +12,14 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.id, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
 
     var body: some View {
         List {
             ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                Text("Item at \(item.rating)")
             }
             .onDelete(perform: deleteItems)
         }
@@ -36,8 +36,12 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let item = Item(context: viewContext)
+            item.id = 0
+            item.title = "Batman"
+            item.backdropPath = "Batman"
+            item.rating = 0.0
+            item.genre = "Adventure"
 
             do {
                 try viewContext.save()
@@ -65,13 +69,6 @@ struct ContentView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
