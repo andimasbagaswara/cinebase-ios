@@ -53,7 +53,7 @@
 		89F96A4F258DD0BE00CF6B65 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F96A4E258DD0BE00CF6B65 /* NavigationBarModifier.swift */; };
 		89F96A57258DD64700CF6B65 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F96A56258DD64700CF6B65 /* DiscoverView.swift */; };
 		89F96A5F258DD6BD00CF6B65 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F96A5E258DD6BD00CF6B65 /* LibraryView.swift */; };
-		89F96A64258DD6C800CF6B65 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F96A63258DD6C800CF6B65 /* ProfileView.swift */; };
+		89F96A64258DD6C800CF6B65 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F96A63258DD6C800CF6B65 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +126,7 @@
 		89F96A4E258DD0BE00CF6B65 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		89F96A56258DD64700CF6B65 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		89F96A5E258DD6BD00CF6B65 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
-		89F96A63258DD6C800CF6B65 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		89F96A63258DD6C800CF6B65 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,7 +338,7 @@
 				89F96A56258DD64700CF6B65 /* DiscoverView.swift */,
 				89F4628F25909DA800B5F75A /* MovieDetailView.swift */,
 				89F96A5E258DD6BD00CF6B65 /* LibraryView.swift */,
-				89F96A63258DD6C800CF6B65 /* ProfileView.swift */,
+				89F96A63258DD6C800CF6B65 /* SearchView.swift */,
 				89B2C5B0258ED39300038D36 /* Components */,
 				89B2C5E4258F1E1500038D36 /* Controls */,
 				89F96A4D258DD0A100CF6B65 /* Modifiers */,
@@ -530,7 +530,7 @@
 				89F96A15258D8C6E00CF6B65 /* ImageLoader.swift in Sources */,
 				8963DB67258D18DB00F6F306 /* NetworkError.swift in Sources */,
 				8963DB27258D15D700F6F306 /* ContentView.swift in Sources */,
-				89F96A64258DD6C800CF6B65 /* ProfileView.swift in Sources */,
+				89F96A64258DD6C800CF6B65 /* SearchView.swift in Sources */,
 				8935337325900D2C00EF4E73 /* MovieDetailScreen.swift in Sources */,
 				89F462D32591028B00B5F75A /* LibraryScreen.swift in Sources */,
 				8963DB25258D15D700F6F306 /* cinebase_iosApp.swift in Sources */,
