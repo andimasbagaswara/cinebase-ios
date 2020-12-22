@@ -18,7 +18,7 @@ class CoreDataManager {
         self.moc = moc
     }
     
-    private func fetchItem(id: Int) -> Item? {
+    func fetchItem(id: Int) -> Item? {
         
         var items = [Item]()
         

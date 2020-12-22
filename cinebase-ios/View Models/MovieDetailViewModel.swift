@@ -51,12 +51,20 @@ class MovieDetailViewModel: ObservableObject {
         }
     }
     
+    func checkItem() -> Bool {
+        if CoreDataManager.shared.fetchItem(id: self.id) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func saveItem() {
         CoreDataManager.shared.saveItem(id: id, title: title, genre: genres, rating: voteAverage, backdropPath: backdropPath)
     }
     
-    func deleteItem(id: Int) {
-        CoreDataManager.shared.deleteItem(id: id)
+    func deleteItem() {
+        CoreDataManager.shared.deleteItem(id: self.id)
     }
     
     var backdropPath: String {

@@ -9,19 +9,24 @@ import SwiftUI
 
 struct LibraryView: View {
     
-    let libraryVM: LibraryViewModel
+    @ObservedObject private var libraryVM = LibraryViewModel()
     
     var body: some View {
         VStack(alignment: .center, spacing: 0, content: {
-            Text("Placeholder")
-                .navigationTitle("Library")
+            List(content: {
+                ForEach(self.libraryVM.items, id: \.id) { (item) in
+                    URLImage(url: item.backdropPath)
+                }
+            })
         })
-        .embedNavigationView()
+        .onAppear(perform: {
+            self.libraryVM.fetchAllItems()
+        })
     }
 }
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryView(libraryVM: LibraryViewModel())
+        LibraryView()
     }
 }

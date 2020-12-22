@@ -11,7 +11,6 @@ import Combine
 
 class LibraryViewModel: ObservableObject {
     
-    @Published var loadingState = LoadingState.loading
     @Published var items = [ItemViewModel]()
     
     init() {
@@ -25,6 +24,5 @@ class LibraryViewModel: ObservableObject {
     
     func fetchAllItems() {
         self.items = CoreDataManager.shared.getAllItems().map(ItemViewModel.init)
-        print(self.items)
     }
 }

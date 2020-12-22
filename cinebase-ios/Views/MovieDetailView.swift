@@ -16,38 +16,32 @@ struct MovieDetailView: View {
             ZStack {
                 URLImage(url: movieDetailVM.posterPath)
                     .aspectRatio(contentMode: .fill)
+                    .frame(width: UIScreen.main.bounds.width, alignment: .center)
+                    .clipped()
                 
                 Rectangle()
                     .foregroundColor(.clear)
                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
             }
             
-            HStack(alignment: .top, spacing: nil, content: {
-                VStack(alignment: .leading, spacing: nil, content: {
-                    Text(movieDetailVM.title)
-                        .font(.customTitle)
-                    Spacer()
-                    Text("\(movieDetailVM.genres) - \(movieDetailVM.spokenLanguage)")
-                        .font(.customBody)
-                        .foregroundColor(.gray)
-                })
+            HStack(alignment: .center, spacing: nil, content: {
+                Text(movieDetailVM.title)
+                    .font(.customTitle)
                 Spacer()
-                VStack(alignment: .center, spacing: nil, content: {
-                    HStack(alignment: .center, spacing: nil, content: {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
-                        Text("\(movieDetailVM.voteAverage, specifier: "%.1f")/10")
-                            .font(.customHeading)
-                            .foregroundColor(.gray)
-                    })
-                    Spacer()
-                    Button(action: {
-                        movieDetailVM.saveItem()
-                    }, label: {
-                        Text("SAVE")
-                    })
-                    .buttonStyle(CustomButtonStyle(isSelected: false))
-                })
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                Text("\(movieDetailVM.voteAverage, specifier: "%.1f")/10")
+                    .font(.customHeading)
+                    .foregroundColor(.gray)
+            })
+            .padding(.horizontal)
+            
+            HStack(alignment: .center, spacing: nil, content: {
+                Text("\(movieDetailVM.genres) - \(movieDetailVM.spokenLanguage)")
+                    .font(.customBody)
+                    .foregroundColor(.gray)
+                Spacer()
+                SaveButton(movieDetailVM: movieDetailVM)
             })
             .padding()
             
@@ -81,6 +75,26 @@ struct MovieDetailView: View {
             }
         })
         .edgesIgnoringSafeArea(.top)
+    }
+}
+
+struct SaveButton: View {
+    
+    let movieDetailVM: MovieDetailViewModel
+    
+    @State var isSaved: Bool = false
+    
+    var body: some View {
+        Button(action: {
+            self.isSaved ? self.movieDetailVM.deleteItem() : self.movieDetailVM.saveItem()
+            self.isSaved.toggle()
+        }, label: {
+            self.isSaved ? Text("SAVED") : Text("SAVE")
+        })
+        .buttonStyle(CustomButtonStyle(isSelected: !self.movieDetailVM.checkItem()))
+        .onAppear(perform: {
+            self.isSaved = self.movieDetailVM.checkItem()
+        })
     }
 }
 

@@ -9,23 +9,12 @@ import SwiftUI
 
 struct LibraryScreen: View {
     
-    @ObservedObject private var libraryVM = LibraryViewModel()
-    
     var body: some View {
         VStack(alignment: .center, spacing: nil, content: {
-            if libraryVM.loadingState == .loading {
-                ProgressView()
-            } else if libraryVM.loadingState == .success {
-                LibraryView(libraryVM: libraryVM)
-            } else if libraryVM.loadingState == .failed {
-                Text("Error Occurred")
-                    .font(.customTitle2)
-                    .foregroundColor(.gray)
-            }
+            LibraryView()
         })
-        .onAppear {
-            self.libraryVM.fetchAllItems()
-        }
+        .navigationTitle("Library")
+        .embedNavigationView()
     }
 }
 
