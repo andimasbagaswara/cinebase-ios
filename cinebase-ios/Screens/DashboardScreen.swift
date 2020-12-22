@@ -19,7 +19,7 @@ struct DashboardScreen: View {
                         Image(systemName: "rectangle.3.offgrid")
                         Text("Library")
                     }.tag(2)
-                    SearchView().tabItem {
+                    SearchScreen().tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }.tag(3)

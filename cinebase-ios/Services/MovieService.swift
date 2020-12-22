@@ -57,4 +57,19 @@ class MovieService: ObservableObject {
             
         }.resume()
     }
+    
+    func getMoviesByName(name: String, completion: @escaping (Result<[Movie]?, NetworkError>) -> Void) {
+        
+        guard let url = URL.urlForSearchMovie(query: name) else { return completion(.failure(.badURL)) }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data, error == nil else { return completion(.failure(.noData)) }
+            
+            guard let response = try? JSONDecoder().decode(MovieResponse.self, from: data) else { return completion(.failure(.decodingError)) }
+            
+            completion(.success(response.movies))
+            
+        }.resume()
+    }
 }

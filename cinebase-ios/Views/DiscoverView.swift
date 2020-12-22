@@ -68,13 +68,13 @@ struct DiscoverView: View {
                     
                     DiscoverSectionScrollView(movieVM: self.discoverVM.upcomingList)
                 }
-                    .navigationTitle("Discover")
             })
             .padding(.bottom)
             .onAppear(perform: {
                 self.discoverVM.loadData()
             })
         })
+        .navigationTitle("Discover")
         .embedNavigationView()
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiscoverBannerScrollView: View {
     
-    var movieVM: [MovieViewModel]
+    let movieVM: [MovieViewModel]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {

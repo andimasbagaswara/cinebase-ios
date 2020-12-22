@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReviewSectionView: View {
     
-    var reviewVM: [ReviewViewModel]
+    let reviewVM: [ReviewViewModel]
     
     var body: some View {
         VStack(alignment: .leading, spacing: Constants.heightRatio * 10, content: {

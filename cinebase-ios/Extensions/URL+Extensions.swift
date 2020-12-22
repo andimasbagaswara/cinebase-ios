@@ -38,4 +38,9 @@ extension URL {
     static func urlForUpcomingMovies() -> URL? {
         return URL(string: "\(Constants.baseURL)/movie/upcoming?api_key=\(Constants.apiKey)&language=en-US")
     }
+    
+    // MARK: GET "/search/movie"
+    static func urlForSearchMovie(query: String) -> URL? {
+        return URL(string: "\(Constants.baseURL)/search/movie?api_key=\(Constants.apiKey)&language=en-US&query=\(query)&page=1&include_adult=false")
+    }
 }
