@@ -11,7 +11,10 @@ struct MovieViewModel {
     
     let movie: Movie
     
-    var backdropPath: String { Constants.imageURL + Constants.backdropSizes + movie.backdropPath }
+    var backdropPath: String {
+        guard let backdropPath = movie.backdropPath else { return "" }
+        return Constants.imageURL + Constants.backdropSizes + backdropPath
+    }
     
     var genres: String {
         if movie.genres.isEmpty { return "New" }
@@ -21,17 +24,20 @@ struct MovieViewModel {
     
     var id: Int { movie.id }
     
-    var originalLanguage: String { movie.originalLanguage }
+    var originalLanguage: String { movie.originalLanguage ?? "" }
     
-    var overview: String { movie.overview }
+    var overview: String { movie.overview ?? "" }
     
-    var posterPath: String { Constants.imageURL + Constants.posterSizes + movie.posterPath }
+    var posterPath: String {
+        guard let posterPath = movie.posterPath else { return "" }
+        return Constants.imageURL + Constants.posterSizes + posterPath
+    }
     
-    var releaseDate: String { movie.releaseDate }
+    var releaseDate: String { movie.releaseDate ?? "" }
     
-    var title: String { movie.title }
+    var title: String { movie.title ?? "" }
     
-    var voteAverage: Double { movie.voteAverage }
+    var voteAverage: Double { movie.voteAverage ?? 0.0 }
     
-    var voteCount: Int { movie.voteCount }
+    var voteCount: Int { movie.voteCount ?? 0 }
 }

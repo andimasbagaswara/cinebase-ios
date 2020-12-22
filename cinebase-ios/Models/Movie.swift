@@ -22,16 +22,16 @@ struct MovieResponse: Codable {
 
 struct Movie: Codable {
     
-    let backdropPath: String
+    let backdropPath: String?
     let genres: [Int]
     let id: Int
-    let originalLanguage: String
-    let overview: String
-    let posterPath: String
-    let releaseDate: String
-    let title: String
-    let voteAverage: Double
-    let voteCount: Int
+    let originalLanguage: String?
+    let overview: String?
+    let posterPath: String?
+    let releaseDate: String?
+    let title: String?
+    let voteAverage: Double?
+    let voteCount: Int?
     
     private enum CodingKeys: String, CodingKey {
         

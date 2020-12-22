@@ -74,7 +74,8 @@ class MovieDetailViewModel: ObservableObject {
     
     var genres: String {
         guard let genres = self.movieDetail?.genres else { return "New" }
-        return genres[0].name
+        guard let genreName = genres[0].name else { return "New" }
+        return genreName
     }
     
     var homepage: String { self.movieDetail?.homepage ?? "" }
@@ -94,7 +95,8 @@ class MovieDetailViewModel: ObservableObject {
     
     var spokenLanguage: String {
         guard let spokenLanguages = self.movieDetail?.spokenLanguages else { return "English" }
-        return spokenLanguages[0].name
+        guard let spokenLanguageName = spokenLanguages[0].name else { return "English" }
+        return spokenLanguageName
     }
     
     var status: String { self.movieDetail?.status ?? "" }
